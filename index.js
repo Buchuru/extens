@@ -1,9 +1,9 @@
 let takeText = document.getElementById('take-text');
 let takeDate = document.getElementById('take-date');
 let diVs = document.getElementById('divs');
-takeText.style = "width:300px; font-size:30px; height:60px;"
-takeDate.style = "width:300px; font-size:30px; height:60px;"
-document.getElementById("only").style ="width:200px; height: 60px; font-size:30px;"
+takeText.style = "width:100px; font-size:15px; height:60px;"
+takeDate.style = "width:100px; font-size:15px; height:60px;"
+document.getElementById("only").style ="width:100px; height: 60px; font-size:15px;"
 let todos;
 const savedTodos = JSON.parse(localStorage.getItem('todos'));
 // model
@@ -69,10 +69,10 @@ function render(){
 todos.forEach(function(todo){
   let newDiv = document.createElement('div');
   newDiv.innerText = todo.title + " "+ todo.dueDate;
-  newDiv.style = "font-size: 40px; overflow:hidden; line-height:70px;"
+  newDiv.style = "font-size: 20px; overflow:hidden; line-height:40px;"
   let deleteButton = document.createElement("button");
   deleteButton.innerText = "Delete";
-  deleteButton.style ="width:100px; height: 60px; font-size:30px; margin-left: 30px; float:right;"
+  deleteButton.style ="width:60px; height: 50px; font-size:15px; margin-left: 10px; float:right; margin-right:10px;"
   deleteButton.onclick = deleteTodo;
   deleteButton.id = todo.id;
   newDiv.appendChild(deleteButton);
